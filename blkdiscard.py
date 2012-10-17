@@ -30,8 +30,8 @@ def usage(msg=None):
     if msg:
         print >>out, "Error:", msg
         print >>out
-    print >>out, strip(USAGE)
-    sys.exit(1 if errmsg else 0)
+    print >>out, USAGE.strip()
+    sys.exit(1 if msg else 0)
 
 def msg(fmt, *args):
     if not quiet:
